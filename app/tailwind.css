@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "Shantell";
+    src: url("/fonts/Shantell_Sans-Normal-Bold.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Shantell";
+    src: url("/fonts/Shantell_Sans-Normal-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Shantell";
+    src: url("/fonts/Shantell_Sans-Normal-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Pilowlava";
+    src: url("/fonts/Pilowlava-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+
