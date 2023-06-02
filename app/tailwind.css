@@ -531,10 +531,6 @@ video {
   margin-right: auto;
 }
 
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
 .flex {
   display: flex;
 }
@@ -547,20 +543,8 @@ video {
   height: 100%;
 }
 
-.w-\[400px\] {
-  width: 400px;
-}
-
-.w-\[500PX\] {
-  width: 500PX;
-}
-
 .w-\[500px\] {
   width: 500px;
-}
-
-.max-w-\[300px\] {
-  max-width: 300px;
 }
 
 .-rotate-12 {
@@ -571,10 +555,6 @@ video {
 .rotate-6 {
   --tw-rotate: 6deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.flex-row {
-  flex-direction: row;
 }
 
 .flex-col {
@@ -593,16 +573,28 @@ video {
   gap: 3rem;
 }
 
-.gap-24 {
-  gap: 6rem;
+.gap-16 {
+  gap: 4rem;
 }
 
 .gap-4 {
   gap: 1rem;
 }
 
-.gap-16 {
-  gap: 4rem;
+.gap-24 {
+  gap: 6rem;
+}
+
+.gap-20 {
+  gap: 5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .overflow-hidden {
@@ -674,6 +666,11 @@ video {
   line-height: 1;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -692,19 +689,9 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.text-tree-poppy-500 {
-  --tw-text-opacity: 1;
-  color: rgb(255 143 33 / var(--tw-text-opacity));
-}
-
 .text-tree-poppy-700 {
   --tw-text-opacity: 1;
   color: rgb(199 79 7 / var(--tw-text-opacity));
-}
-
-.drop-shadow-lg {
-  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 @font-face {
@@ -782,6 +769,10 @@ video {
     height: 500px;
   }
 
+  .md\:max-w-\[300px\] {
+    max-width: 300px;
+  }
+
   .md\:max-w-\[400px\] {
     max-width: 400px;
   }
@@ -790,16 +781,16 @@ video {
     max-width: 500px;
   }
 
-  .md\:max-w-\[300px\] {
-    max-width: 300px;
-  }
-
   .md\:flex-row {
     flex-direction: row;
   }
 
   .md\:gap-12 {
     gap: 3rem;
+  }
+
+  .md\:gap-16 {
+    gap: 4rem;
   }
 
   .md\:text-3xl {
