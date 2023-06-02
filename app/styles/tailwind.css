@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.bordersp {
-  border-image: "url(/bg.png)";
-  /*border-image-width: 100px;*/
-  /*border-width: 100px;*/
-  /*border-image-slice: fill;*/
-  /*border-width: 40px;*/
-  /*border-style: solid;*/
-}
-
 
 @font-face {
   font-family: "Shantell";
