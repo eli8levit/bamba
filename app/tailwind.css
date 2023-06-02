@@ -551,6 +551,14 @@ video {
   width: 400px;
 }
 
+.w-\[500PX\] {
+  width: 500PX;
+}
+
+.w-\[500px\] {
+  width: 500px;
+}
+
 .max-w-\[300px\] {
   max-width: 300px;
 }
@@ -591,6 +599,10 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-16 {
+  gap: 4rem;
 }
 
 .overflow-hidden {

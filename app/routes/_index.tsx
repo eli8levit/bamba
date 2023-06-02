@@ -9,8 +9,8 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="flex flex-col gap-24 overflow-hidden p-4">
-      <h1 className="font-pilowlava text-7xl text-tree-poppy-500 md:leading-[1] lg:text-[120px]">
+    <div className="flex flex-col gap-16 overflow-hidden p-4">
+      <h1 className="font-pilowlava text-7xl text-tree-poppy-700 md:leading-[1] lg:text-[120px]">
         I'm Bamba
       </h1>
       <div className="relative mx-auto flex flex-col items-center justify-center gap-4 rounded-lg border-tree-poppy-700 bg-[length:400px] bg-repeat md:gap-12 lg:flex-row lg:gap-24">
@@ -29,10 +29,10 @@ export default function Index() {
         <p className="font-shantell text-3xl !leading-relaxed text-black md:max-w-[400px]">
           My father took me to the sea for the first time 😍 →
         </p>
-        <img src={Sea} className="w-[400px] rotate-6" />
+        <img src={Sea} className="w-[500px] rotate-6" />
       </div>
       <div className="flex flex-col items-center justify-center gap-12 md:flex-row">
-        <img src={Sleep} className="w-[400px] -rotate-12" />
+        <img src={Sleep} className="w-[500px] -rotate-12" />
         <p className="font-shantell text-3xl !leading-relaxed text-black md:max-w-[400px]">
           ← And that's how I'm sleeping
         </p>
