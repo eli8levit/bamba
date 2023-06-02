@@ -70,14 +70,12 @@ export default function Index() {
           className="h-[250px] object-contain md:h-[500px] 2xl:h-[500px]"
         />
         <p className="mx-auto mb-12 max-w-[300px] font-shantell text-2xl !leading-relaxed text-black md:max-w-[500px] md:text-3xl">
-          <span className="font-kalam font-bold text-tree-poppy-700 md:text-4xl">
+          <span className="font-bold text-tree-poppy-700 md:text-4xl">
             I love to sleep, to play and to eat.{" "}
           </span>
           I'm 4 months old. I'm a mongrel mixed with Pit Bull. And I have{" "}
-          <span className="font-kalam font-bold text-tree-poppy-700">
-            "white sock"
-          </span>{" "}
-          on my left hand ©
+          <span className="font-bold text-tree-poppy-700">"white sock"</span> on
+          my left hand ©
         </p>
       </div>
     </div>
