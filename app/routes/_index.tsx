@@ -26,14 +26,14 @@ export default function Index() {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:gap-12">
-        <p className="font-shantell text-xl !leading-relaxed text-black md:max-w-[400px] md:text-3xl">
+        <p className="font-shantell text-xl font-bold !leading-relaxed text-black md:max-w-[400px] md:text-3xl">
           My father took me to the sea for the first time 😍 →
         </p>
         <img src={Sea} className="w-[500px] rotate-6" />
       </div>
       <div className="flex flex-col items-center justify-center md:flex-row md:gap-12">
         <img src={Sleep} className="w-[500px] -rotate-12" />
-        <p className="font-shantell text-xl !leading-relaxed text-black md:max-w-[400px] md:text-3xl">
+        <p className="font-shantell text-xl font-bold !leading-relaxed text-black md:max-w-[400px] md:text-3xl">
           ← And that's how I'm sleeping
         </p>
       </div>
