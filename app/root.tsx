@@ -24,7 +24,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full bg-tree-poppy-200">
+      <body className="h-full bg-tree-poppy-100 bg-blob bg-cover bg-center bg-no-repeat">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
