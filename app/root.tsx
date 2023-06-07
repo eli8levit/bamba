@@ -1,5 +1,7 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
+import { useScroll, useTransform } from "framer-motion";
+
 import {
   Links,
   LiveReload,
@@ -16,6 +18,8 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
+  const { scrollY } = useScroll();
+
   return (
     <html lang="en" className="h-full">
       <head>
@@ -24,7 +28,18 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="h-full bg-tree-poppy-100 bg-blob bg-contain bg-center bg-no-repeat">
+      <body className="relative h-full bg-noise bg-[length:400px] bg-center">
+        {/*<motion.img*/}
+        {/*  style={{ rotate }}*/}
+        {/*  // transition={{*/}
+        {/*  //   repeat: Infinity,*/}
+        {/*  //   repeatType: "loop",*/}
+        {/*  //   duration: 60,*/}
+        {/*  //   type: "linear",*/}
+        {/*  // }}*/}
+        {/*  src={Blob}*/}
+        {/*  className="absolute bottom-0 left-0 right-0 top-0 -z-10 h-full w-full object-contain"*/}
+        {/*/>*/}
         <Outlet />
         <ScrollRestoration />
         <Scripts />

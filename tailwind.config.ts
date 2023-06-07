@@ -6,7 +6,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        blob: "url(/blob.svg)",
+        blob: "url(/blob.png)",
+        main: "url(/bg.jpg)",
+        noise: "url(/noise.jpg)",
       },
       fontFamily: {
         shantell: ["Shantell", ...defaultTheme.fontFamily.sans],
