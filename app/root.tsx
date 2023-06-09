@@ -28,7 +28,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="relative h-full bg-noise bg-[length:400px] bg-center">
+      <body className="relative flex h-full flex-col items-center justify-center bg-main bg-[length:1000px] bg-center">
         {/*<motion.img*/}
         {/*  style={{ rotate }}*/}
         {/*  // transition={{*/}
