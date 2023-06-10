@@ -1,6 +1,6 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll } from "framer-motion";
 
 import {
   Links,
@@ -11,11 +11,21 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./tailwind.css";
+import Manifest from "../public/site.webmanifest";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: styles },
+  { rel: "manifest", href: Manifest },
 ];
+
+export function meta() {
+  return [
+    { "theme-color": "#FFDEA8" },
+    { title: "Bamba" },
+    { description: "I'm, super cute puppy" },
+  ];
+}
 
 export default function App() {
   const { scrollY } = useScroll();
@@ -28,18 +38,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="relative flex h-full flex-col items-center justify-center bg-main bg-[length:1000px] bg-center">
-        {/*<motion.img*/}
-        {/*  style={{ rotate }}*/}
-        {/*  // transition={{*/}
-        {/*  //   repeat: Infinity,*/}
-        {/*  //   repeatType: "loop",*/}
-        {/*  //   duration: 60,*/}
-        {/*  //   type: "linear",*/}
-        {/*  // }}*/}
-        {/*  src={Blob}*/}
-        {/*  className="absolute bottom-0 left-0 right-0 top-0 -z-10 h-full w-full object-contain"*/}
-        {/*/>*/}
+      <body className="relative flex min-h-full flex-col items-center justify-center bg-main bg-[length:1000px] bg-center">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
