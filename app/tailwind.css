@@ -526,6 +526,10 @@ video {
   position: relative;
 }
 
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -533,6 +537,10 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .flex {
@@ -555,8 +563,29 @@ video {
   min-height: 100%;
 }
 
+.w-\[250px\] {
+  width: 250px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.max-w-\[1000px\] {
+  max-width: 1000px;
+}
+
 .max-w-\[400px\] {
   max-width: 400px;
+}
+
+.max-w-\[300px\] {
+  max-width: 300px;
 }
 
 .shrink-0 {
@@ -571,6 +600,10 @@ video {
   flex-direction: column;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -581,6 +614,10 @@ video {
 
 .gap-12 {
   gap: 3rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .gap-8 {
@@ -595,9 +632,18 @@ video {
   border-width: 0.5px;
 }
 
+.border-\[1px\] {
+  border-width: 1px;
+}
+
 .border-tree-poppy-100 {
   --tw-border-opacity: 1;
   border-color: rgb(255 241 212 / var(--tw-border-opacity));
+}
+
+.border-tree-poppy-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 222 168 / var(--tw-border-opacity));
 }
 
 .bg-\[rgba\(255\2c 255\2c 255\2c 0\.4\)\] {
@@ -619,6 +665,11 @@ video {
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .px-8 {
@@ -644,9 +695,24 @@ video {
   line-height: 1;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .font-bold {
@@ -662,9 +728,30 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-tree-poppy-600 {
+  --tw-text-opacity: 1;
+  color: rgb(240 106 6 / var(--tw-text-opacity));
+}
+
 .text-tree-poppy-700 {
   --tw-text-opacity: 1;
   color: rgb(199 79 7 / var(--tw-text-opacity));
+}
+
+.text-tree-poppy-900 {
+  --tw-text-opacity: 1;
+  color: rgb(127 54 15 / var(--tw-text-opacity));
+}
+
+.text-tree-poppy-500 {
+  --tw-text-opacity: 1;
+  color: rgb(255 143 33 / var(--tw-text-opacity));
+}
+
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-xl {
@@ -677,6 +764,14 @@ video {
   --tw-backdrop-blur: blur(12px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 @font-face {
@@ -758,6 +853,18 @@ video {
     height: 380px;
   }
 
+  .md\:max-w-\[600px\] {
+    max-width: 600px;
+  }
+
+  .md\:max-w-\[800px\] {
+    max-width: 800px;
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:rounded-\[120px\] {
     border-radius: 120px;
   }
@@ -773,8 +880,17 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:max-w-\[800px\] {
+    max-width: 800px;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
   }
 }
 

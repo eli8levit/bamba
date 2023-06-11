@@ -1,6 +1,5 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
-import { useScroll } from "framer-motion";
 
 import {
   Links,
@@ -28,8 +27,6 @@ export function meta() {
 }
 
 export default function App() {
-  const { scrollY } = useScroll();
-
   return (
     <html lang="en" className="h-full">
       <head>
