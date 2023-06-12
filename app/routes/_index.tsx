@@ -7,20 +7,20 @@ import { useScroll, motion, useTransform } from "framer-motion";
 
 export default function _index() {
   const { scrollY } = useScroll();
-  const translate = useTransform(scrollY, [0, 500], [0, 300]);
-  const translate2 = useTransform(scrollY, [0, 500], [300, 0]);
+  const translate = useTransform(scrollY, [0, 380], [0, 300]);
+  const translate2 = useTransform(scrollY, [0, 380], [300, 0]);
   const translate3 = useTransform(scrollY, [30, 300], [20, 130]);
   const translate4 = useTransform(scrollY, [30, 300], [20, 100]);
 
   return (
-    <div className="overflow-hidden">
-      <div className="m-4 flex max-w-[1000px] flex-col items-center justify-center gap-6 md:m-16 2xl:m-28">
+    <div className="mx-auto flex w-full flex-col items-center overflow-hidden">
+      <div className="m-4 flex flex-col items-center justify-center gap-6 md:m-16 lg:w-[1050px] 2xl:m-28 2xl:w-[1300px]">
         <motion.div
           initial={{ opacity: 0, translateX: -300 }}
           animate={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 0.5 }}
           style={{ x: translate }}
-          className="grid grid-cols-1 gap-12 rounded-[70px] border-[0.5px] border-tree-poppy-100 bg-[rgba(255,255,255,0.4)] px-8 py-16 shadow-xl backdrop-blur-md md:rounded-[120px] md:p-24 lg:grid-cols-2 2xl:p-28"
+          className="grid w-full grid-cols-1 gap-12 rounded-[70px] border-[0.5px] border-tree-poppy-100 bg-[rgba(255,255,255,0.4)] px-8 py-16 shadow-xl backdrop-blur-md md:rounded-[120px] md:p-24 lg:grid-cols-2 2xl:gap-28 2xl:p-32"
         >
           <div className="mx-auto flex max-w-[400px] flex-col gap-8">
             <h1 className="font-pilowlava text-6xl text-tree-poppy-700 md:text-7xl lg:text-8xl 2xl:text-9xl">
@@ -46,37 +46,39 @@ export default function _index() {
           animate={{ translateX: 0, opacity: 1 }}
           transition={{ duration: 0.4 }}
           style={{ x: translate2 }}
-          className="grid w-full max-w-[1000px] grid-cols-1 items-end gap-12 rounded-[70px] border-[0.5px] border-tree-poppy-100 bg-[rgba(255,255,255,0.4)] px-8 py-16 shadow-xl backdrop-blur-md md:grid-cols-3 md:rounded-[120px] md:p-24 2xl:p-28"
+          className="grid w-full grid-cols-1 items-end gap-8 rounded-[70px] border-[0.5px] border-tree-poppy-100 bg-[rgba(255,255,255,0.4)] px-8 py-16 shadow-xl backdrop-blur-md md:grid-cols-3 md:rounded-[120px] md:p-24 2xl:p-28"
         >
           <div className="mx-auto flex max-w-[300px] flex-col gap-8">
-            <h2 className="font-shantell text-base text-black">I'm sleeping</h2>
+            <h2 className="font-shantell text-base text-black lg:text-lg 2xl:text-xl">
+              I'm sleeping
+            </h2>
             <motion.img
               src={One}
               style={{ borderRadius: translate3 }}
-              className="mx-auto h-[300px] w-[300px] border-[1px] border-tree-poppy-200 object-cover shadow-md md:h-[250px] md:w-[250px]"
+              className="mx-auto h-[300px] w-[300px] border-4 border-tree-poppy-300 object-cover shadow-md md:h-[250px] md:w-[250px]"
             />
           </div>
           <div className="mx-auto flex max-w-[300px] flex-col gap-8">
-            <h2 className="font-shantell text-base text-black">
+            <h2 className="font-shantell text-base text-black lg:text-lg 2xl:text-xl">
               My owner took me to the sea for the first time
             </h2>
             <motion.img
               src={Two}
               style={{ borderRadius: translate3 }}
-              className="mx-auto h-[300px] w-[300px] border-[1px] border-tree-poppy-200 object-cover shadow-md md:h-[250px] md:w-[250px]"
+              className="mx-auto h-[300px] w-[300px] border-4 border-tree-poppy-300 object-cover shadow-md md:h-[250px] md:w-[250px]"
             />
           </div>
           <div className="mx-auto flex max-w-[300px] flex-col gap-8">
-            <h2 className="font-shantell text-base text-black">
+            <h2 className="font-shantell text-base text-black lg:text-lg 2xl:text-xl">
               First time in forest with a lot of noises, smells and trees
             </h2>
             <motion.img
               src={Three}
               style={{ borderRadius: translate3 }}
-              className="mx-auto h-[300px] w-[300px] border-[1px] border-tree-poppy-200 object-cover shadow-md md:h-[250px] md:w-[250px]"
+              className="mx-auto h-[300px] w-[300px] border-4 border-tree-poppy-300 object-cover shadow-md md:h-[250px] md:w-[250px]"
             />
           </div>
-          <p className="col-span-full mx-auto mt-12 max-w-[400px] font-pilowlava text-4xl text-tree-poppy-900 md:w-max md:max-w-[600px] lg:max-w-[800px]">
+          <p className="col-span-full mx-auto mt-12 max-w-[400px] font-pilowlava text-4xl text-tree-poppy-900 md:w-max md:max-w-[600px] lg:max-w-full 2xl:mt-20 2xl:text-6xl">
             All the fun is yet to come :)
           </p>
         </motion.div>
