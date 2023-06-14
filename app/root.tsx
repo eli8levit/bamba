@@ -9,6 +9,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import config from "tailwind.config";
 import styles from "./tailwind.css";
 import Manifest from "../public/site.webmanifest";
 
@@ -20,9 +21,23 @@ export const links: LinksFunction = () => [
 
 export function meta() {
   return [
-    { "theme-color": "#FFDEA8" },
-    { title: "Bamba" },
-    { description: "I'm, super cute puppy" },
+    { "theme-color": `${config.theme.extend.colors["tree-poppy"]["200"]}` },
+    { title: "I'm Bamba" },
+    { description: "I'm, super cute little puppy" },
+    { "og:title": "I'm Bamba" },
+    {
+      "og:description": "Super cute little puppy",
+    },
+    { "og:image": "https://imbamba.co/bg.jpg" },
+    { "og:url": "https://iambamba.co/" },
+    { "twitter:url": "https://iambamba.co/" },
+    { "twitter:title": "I'm Bamba" },
+    {
+      "twitter:description": "Super cute little puppy",
+    },
+    { "twitter:image": "https://imbamba.co/bg.jpg" },
+    { "twitter:card": "summary_large_image" },
+    { viewport: "width=device-width,initial-scale=1" },
   ];
 }
 
