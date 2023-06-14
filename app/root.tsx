@@ -12,6 +12,7 @@ import {
 import config from "tailwind.config";
 import styles from "./tailwind.css";
 import Manifest from "../public/site.webmanifest";
+import { V2_MetaFunction } from "@remix-run/node";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -19,7 +20,7 @@ export const links: LinksFunction = () => [
   { rel: "manifest", href: Manifest },
 ];
 
-export function meta() {
+export const meta: V2_MetaFunction = () => {
   return [
     { "theme-color": `${config.theme.extend.colors["tree-poppy"]["200"]}` },
     { title: "I'm Bamba" },
@@ -39,7 +40,7 @@ export function meta() {
     { "twitter:card": "summary_large_image" },
     { viewport: "width=device-width,initial-scale=1" },
   ];
-}
+};
 
 export default function App() {
   return (
