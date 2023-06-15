@@ -1,5 +1,5 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
 import {
   Links,
@@ -12,7 +12,6 @@ import {
 import config from "tailwind.config";
 import styles from "./tailwind.css";
 import Manifest from "../public/site.webmanifest";
-import { V2_MetaFunction } from "@remix-run/node";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -20,27 +19,21 @@ export const links: LinksFunction = () => [
   { rel: "manifest", href: Manifest },
 ];
 
-export const meta: V2_MetaFunction = () => {
-  return [
-    { "theme-color": `${config.theme.extend.colors["tree-poppy"]["200"]}` },
-    { title: "I'm Bamba" },
-    { description: "I'm, super cute little puppy" },
-    { "og:title": "I'm Bamba" },
-    {
-      "og:description": "Super cute little puppy",
-    },
-    { "og:image": "https://imbamba.co/bg.jpg" },
-    { "og:url": "https://iambamba.co/" },
-    { "twitter:url": "https://iambamba.co/" },
-    { "twitter:title": "I'm Bamba" },
-    {
-      "twitter:description": "Super cute little puppy",
-    },
-    { "twitter:image": "https://imbamba.co/bg.jpg" },
-    { "twitter:card": "summary_large_image" },
-    { viewport: "width=device-width,initial-scale=1" },
-  ];
-};
+export const meta: MetaFunction = () => ({
+  "theme-color": config.theme.extend.colors["tree-poppy"]["200"],
+  title: "I'm Bamba",
+  description: "I'm super cute little puppy",
+  "og:title": "I'm Bamba",
+  "og:description": "I'm super cute little puppy",
+  "og:image": "https://imbamba.co/bg.jpg",
+  "og:url": "https://iambamba.co/",
+  "twitter:url": "https://iambamba.co/",
+  "twitter:title": "I'm Bamba",
+  "twitter:description": "I'm super cute little puppy",
+  "twitter:image": "https://imbamba.co/bg.jpg",
+  "twitter:card": "summary_large_image",
+  viewport: "width=device-width,initial-scale=1",
+});
 
 export default function App() {
   return (
